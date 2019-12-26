@@ -5,8 +5,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SingleTopic from './singleTopic'
 import NewTopic from './newTopic'
-import Badge from 'react-bootstrap/Badge'
-
 const TopicList = ({user}) => {
     const [topics, setTopic] = useState([]); //u topics ubacuje sve teme
 
@@ -22,7 +20,7 @@ const TopicList = ({user}) => {
     return (
         <div className='topicList'>
             <h2>
-                Example heading 
+                Spisak tema
             </h2>
             <ul>
                 {topics.map((tp) => 
@@ -31,6 +29,7 @@ const TopicList = ({user}) => {
                 </Link> )}
             </ul>
             <NewTopic user={user}/>
+            
         </div>
     )
 }

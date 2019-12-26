@@ -23,7 +23,8 @@ const Header = ({logedIn, setUser,history,user }) => {
                 <nav>
                     
                     <Link to='/'><Logo /></Link>
-                    <h1>Forum .. treba naziv foruma</h1>
+                    <h1 style={{display:'inline-block'}}>Retro forum</h1>
+                    <br />
                     <Link to='/login' ><button>Prijavite se</button></Link>
                     <Link to='register1'><button>Registarcija</button></Link>                </nav>
             </header>

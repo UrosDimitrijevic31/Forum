@@ -11,9 +11,14 @@ header {
 }
 header h1{
     text-align: center;
-    margin-left: 550px;
+    margin-left: 700px;
+    margin-bottom: 40px;
+    font-size: 60px;
     
 } 
+.divMsg{
+    min-height: 60x;
+}
 header a {
     color: white;
     font-size: 20px;
@@ -27,6 +32,7 @@ content {
 }
 content h1{
     margin: 20px;
+    font-size: 50px;
 }
 content p{
     border: 1px solid black;
@@ -60,32 +66,10 @@ footer {
     
   }
 
-
-/*
-form{
-    border: 1px solid black;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto ;
-    margin-top: 10px;
-    background-color: powderblue;
+ul li {
+      list-style-type: none;
 }
-form input{
-    display: block;
-    margin: 5px;
-    margin-left: 20px;
+content h2 {
+    margin: 30px;
+    font-size: 40px;
 }
-
-header nav h1{
-    display: inline;
-    margin-left: 20px;
-    margin-right: 200px;
-}
-
-nav button{
-    margin-left: 5px;
-}
-.topicList h3 {
-    margin-left: 30px;
-} */
-

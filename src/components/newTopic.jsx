@@ -1,6 +1,5 @@
 import React from 'react'
-import { useEffect } from 'react'
-import { newTopic, getUserId } from '../utility/forum-service'
+import { newTopic} from '../utility/forum-service'
 import { useState } from 'react'
 import { addMessage } from '../utility/forum-service'
 import Form from 'react-bootstrap/Form'
@@ -13,10 +12,9 @@ const NewTopic = ({user}) => {
 
     const [title, setTitle] = useState('');
     const [firstMsg, setFirstMsg] = useState('');
-    const[topicID, setTopicID] = useState('');
 
     function handleSubmit() {
-        if(user=== undefined || title === '') return ;
+        if(user=== undefined || title === '') return alert('niste ulogovani ili niste uneli naziv teme');
         else {
             //dodavanje nove teme i prve poruke
             newTopic(user.user_id, title).then(data => {
@@ -43,14 +41,14 @@ const NewTopic = ({user}) => {
 
         <Form.Group controlId="formBasicEmail">
           <Form.Label >Unesite naziv teme</Form.Label>
-          <Form.Control type="text" placeholder="Unesite naziv teme" required onInput={e => {
+          <Form.Control type="text" placeholder="Unesite naziv teme" value={title} onChange={e => {
                     setTitle(e.target.value);
                 }} />
         </Form.Group>
       
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Unesite prvu poruku</Form.Label>
-          <Form.Control type="text" placeholder="Unesite prvu poruku"  required onInput={e => {
+          <Form.Control type="text" placeholder="Unesite prvu poruku"  value={firstMsg} onChange={e => {
                     setFirstMsg(e.target.value)
                 }} />
         </Form.Group>
